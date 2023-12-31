@@ -410,7 +410,8 @@
 		
 		function buscaUserPagAjax(url) {
 
-			var urlAction = document.getElementById('formUser').action; // Redirecionamento pra servelet
+			var urlAction = document.getElementById('formUser').action; 
+			var nomeBusca = document.getElementById('nomeBusca').value;
 			
 			$.ajax({
 
@@ -508,7 +509,6 @@
 											
 											$("#ulPaginacaoUserAjax").append('<li class="page-item"><a class="page-link" href="#" onclick="buscaUserPagAjax(\''+url+'\')">' + (p + 1) + '</a></li>');
 										}
-										
 									}
 
 								}).fail(
